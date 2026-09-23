@@ -174,8 +174,8 @@ export const DashboardView: React.FC = () => {
               <span className="animate-bounce-subtle text-2xl">👋</span>
             </h1>
             <h2 
-              className="text-3xl xs:text-4xl sm:text-5xl font-black tracking-tight border-b-2 drop-shadow-[0_0_15px_rgba(4,120,87,0.4)] w-fit"
-              style={{ color: '#01a987', borderColor: '#009341' }}
+              className="text-3xl xs:text-4xl sm:text-5xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(4,120,87,0.4)] w-fit"
+              style={{ color: '#01a987' }}
             >
               {userProfile.name || 'Abdullah'}
             </h2>
