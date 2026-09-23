@@ -57,13 +57,13 @@ const MainLayout: React.FC = () => {
       {/* 100% Saturated Vivid Forest Sunlit Background representing image mockup exactly */}
       <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1920&q=80"
           alt="Glowing sunlit forest nature background"
           className="w-full h-full object-cover transition-all duration-700"
-          style={{ filter: 'brightness(0.95) saturate(145%) contrast(110%)' }}
+          style={{ filter: 'brightness(0.55) saturate(135%) contrast(115%)' }}
         />
         {/* Magic sunrays and leaf shadows glass vignette layer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/80 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/90 pointer-events-none" />
       </div>
 
       {/* Ambient glowing dust & green light particle indicators */}
@@ -73,7 +73,7 @@ const MainLayout: React.FC = () => {
       </div>
 
       {/* Main floating desktop frames (Padded to match mockup image borders exactly) */}
-      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden">
+      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden backdrop-blur-[2px] bg-black/10">
         {/* Floating top bar */}
         <Header />
 

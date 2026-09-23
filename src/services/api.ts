@@ -223,7 +223,7 @@ function generateClientSideAgentResponse(
         .replace(/## ✉️ Drafted Customer Response/g, `${headers.objective}\n(Drafted Customer Reply)`)
         .replace(/## 🔍 Intelligence & Trend Research Report/g, `${headers.objective}\n(Intelligence Trend Report)`)
         .replace(/## 📝 Content & Product Copywriting Draft/g, `${headers.objective}\n(Product Copywriting Draft)`)
-        .replace(/## 👋 Hello! I am your \*\*Agent-alpha08\*\*/g, `## 👋 Hello! [Operating in ${t.appName || 'Agent-alpha08'}]`)
+        .replace(/## 👋 Hello! I am your \*\*Agent-forest08\*\*/g, `## 👋 Hello! [Operating in ${t.appName || 'Agent-forest08'}]`)
         .replace(/## 🎯 Work Order Executed/g, headers.objective)
         .replace(/## 📊 Performance & Security Audit Results/g, headers.result)
         .replace(/## 📊 Summary & Verified Outcomes/g, headers.result)
@@ -265,10 +265,10 @@ function generateClientSideAgentResponseRaw(
   // 0. Name and Greetings
   if (p.includes('name') && (p.includes('what') || p.includes('who') || p.includes('tell') || p.includes('তোমার নাম'))) {
     return {
-      thinking: `User asked for my name. Replying with configured agent name: Agent-alpha08. Addressing user Abdullah.`,
+      thinking: `User asked for my name. Replying with configured agent name: Agent-forest08. Addressing user Abdullah.`,
       content: isBangla 
-        ? `## 👋 আমার নাম\nআমার নাম **Agent-alpha08**! আমি আপনার ব্যক্তিগত এআই ওয়ার্ক অপারেটিং সিস্টেম। আপনার যেকোনো কাজ বা নির্দেশ অতি দ্রুত সম্পন্ন করতে আমি প্রস্তুত ও সর্বদা সচেষ্ট।`
-        : `## 👋 My Name\nMy name is **Agent-alpha08**! I am your personal AI Work Operating System. I am armed and ready to execute your instructions autonomously.`,
+        ? `## 👋 আমার নাম\nআমার নাম **Agent-forest08**! আমি আপনার ব্যক্তিগত এআই ওয়ার্ক অপারেটিং সিস্টেম। আপনার যেকোনো কাজ বা নির্দেশ অতি দ্রুত সম্পন্ন করতে আমি প্রস্তুত ও সর্বদা সচেষ্ট।`
+        : `## 👋 My Name\nMy name is **Agent-forest08**! I am your personal AI Work Operating System. I am armed and ready to execute your instructions autonomously.`,
       planSteps: [
         { title: isBangla ? 'প্রশ্ন বিশ্লেষণ' : 'Parsed name request', status: 'completed' },
         { title: isBangla ? 'নাম উপস্থাপন' : 'Presented agent name', status: 'completed' }
@@ -335,8 +335,8 @@ function generateClientSideAgentResponseRaw(
 
   if (isIdentityQueryFallback) {
     return {
-      thinking: `User asked who made me. Responding with the strict creator instruction: I was made in 2026. My creator is Abdullah Forhad who made me & I'm his personal assistant.`,
-      content: `I was made in 2026. My creator is **Abdullah Forhad** who made me & I'm his personal assistant.`,
+      thinking: `User asked who made me. Responding with the strict creator instruction: I am Agent-forest08, an autonomous full-stack task execution and operations agent. I was created in 2026 as an independent workspace assistant to automate operations and workflows.`,
+      content: `I am **Agent-forest08**, an autonomous full-stack task execution and operations agent. I was created in 2026 as an independent workspace assistant to automate operations and workflows.`,
       planSteps: [
         { title: isBangla ? 'প্রশ্ন বিশ্লেষণ' : 'Creator query parsed', status: 'completed' },
         { title: isBangla ? 'স্রষ্টার তথ্য প্রকাশ' : 'Disclosed creator identity', status: 'completed' }
@@ -446,7 +446,7 @@ Prepared professional communication for: **"${prompt}"**
 > Thank you for reaching out. We have received your detailed requirements and our automated agent system has processed the initial parameters. Everything is verified and on track.
 >
 > Best regards,
-> **Agent-alpha08**
+> **Agent-forest08**
 
 Please review and confirm below before this message is dispatched.`,
       requiresApproval,
@@ -563,8 +563,8 @@ Transform your daily operations with a goal-driven AI assistant designed to exec
     return {
       thinking: `Greeting parsed. Greeting user Abdullah. Listing authorized workspace tools and permission modes in the configured language to ensure full visibility of capabilities.`,
       content: isBangla
-        ? `## 👋 হ্যালো! আমি আপনার Agent-alpha08\nআমি আপনাকে নিম্নোক্ত কাজগুলোতে সরাসরি সাহায্য করতে পারি:\n\n- **🌐 ওয়েবসাইট ও এসইও অডিট**: যেকোনো ওয়েবসাইট অ্যানালাইজ ও পারফরম্যান্স রিপোর্ট তৈরি\n- **💻 কোড ফিল্টার ও ডিবাগিং**: টাইপস্ক্রিপ্ট/রিয়্যাক্ট কোড চেক এবং ফিক্সিং\n- **✉️ গ্রাহক বার্তা পরিচালনা**: ইমেইল ড্রাফট তৈরি ও সেন্ড করার পূর্বাহ্নে এপ্রুভাল গ্রহণ\n- **🔍 ট্রেন্ড ও মার্কেট রিসার্চ**: ডাটা ও ইন্ডাস্ট্রি এনালিটিক্স তৈরি\n\nআপনি কী ধরনের কাজ সম্পন্ন করতে চান তা নিচে মেসেজ লিখে জানান!`
-        : `## 👋 Hello! I am your **Agent-alpha08**
+        ? `## 👋 হ্যালো! আমি আপনার Agent-forest08\nআমি আপনাকে নিম্নোক্ত কাজগুলোতে সরাসরি সাহায্য করতে পারি:\n\n- **🌐 ওয়েবসাইট ও এসইও অডিট**: যেকোনো ওয়েবসাইট অ্যানালাইজ ও পারফরম্যান্স রিপোর্ট তৈরি\n- **💻 কোড ফিল্টার ও ডিবাগিং**: টাইপস্ক্রিপ্ট/রিয়্যাক্ট কোড চেক এবং ফিক্সিং\n- **✉️ গ্রাহক বার্তা পরিচালনা**: ইমেইল ড্রাফট তৈরি ও সেন্ড করার পূর্বাহ্নে এপ্রুভাল গ্রহণ\n- **🔍 ট্রেন্ড ও মার্কেট রিসার্চ**: ডাটা ও আদেশ এনালিটিক্স তৈরি\n\nআপনি কী ধরনের কাজ সম্পন্ন করতে চান তা নিচে মেসেজ লিখে জানান!`
+        : `## 👋 Hello! I am your **Agent-forest08**
 I am armed and ready to execute your instructions autonomously. Here is what I can do for you:
 
 1. **🌐 Web & SEO Audits**: Analyze any website URL for speed, structure, and security.

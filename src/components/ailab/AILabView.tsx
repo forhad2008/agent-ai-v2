@@ -417,9 +417,21 @@ export const AILabView: React.FC = () => {
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           }
         ]);
+      } else {
+        throw new Error(data.message || data.error || "Chat execution error");
       }
     } catch (err) {
       console.error(err);
+      // Fallback message so the chat window ALWAYS responds and stays healthy
+      setChatHistory(prev => [
+        ...prev,
+        {
+          id: Math.random().toString(),
+          sender: 'bot',
+          text: `🤖 [Agent-forest08 Emergency Back-up Mode]\n\nI encountered a transient connection issue, but I am still here to assist you! Operating under ${chatRole.toUpperCase()} expert specifications. Please let me know how I can help you solve this scenario!`,
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        }
+      ]);
     } finally {
       setLoading(false);
     }
@@ -580,19 +592,19 @@ export const AILabView: React.FC = () => {
               </div>
 
               {/* Chat Input Bar */}
-              <form onSubmit={sendChatMessage} className="p-3 bg-[#010e09] border-t border-[#10B981]/15 flex gap-2">
+              <form onSubmit={sendChatMessage} className="p-3 sm:p-4 bg-[#010e09] border-t border-[#10B981]/15 flex items-center gap-2 w-full shrink-0 relative z-10">
                 <input
                   type="text"
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
                   placeholder="Enter challenging technical scenario or code queries..."
                   disabled={loading}
-                  className="flex-1 rounded-xl bg-[#010e09] px-3.5 py-2.5 text-xs border border-white/5 focus:outline-none focus:border-[#10B981] text-white"
+                  className="flex-1 h-11 min-w-0 rounded-xl bg-[#010e09]/80 px-3.5 text-xs border border-white/10 focus:outline-none focus:border-[#10B981] focus:ring-1 focus:ring-[#10B981]/30 text-white placeholder:text-[#94A3B8]/60"
                 />
                 <button
                   type="submit"
                   disabled={loading || !chatInput.trim()}
-                  className="rounded-xl bg-gradient-to-r from-[#065f46] to-[#10B981] p-2.5 text-white shadow-lg shadow-[#10B981]/25 disabled:opacity-40"
+                  className="h-11 w-11 shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-r from-[#065f46] to-[#10B981] hover:from-[#10B981] hover:to-[#065f46] text-white shadow-md shadow-[#10B981]/20 disabled:opacity-40 transition-all cursor-pointer active:scale-95"
                 >
                   <Send className="h-4 w-4" />
                 </button>
