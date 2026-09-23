@@ -1,0 +1,8 @@
+{
+  "name": "Agent-forest08",
+  "description": "High-fidelity Emerald Forest-themed Personal AI Operating System and voice-capable execution agent powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
