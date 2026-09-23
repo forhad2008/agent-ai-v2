@@ -260,7 +260,7 @@ export const Sidebar: React.FC = () => {
           {/* Core branding logo image */}
           <div className="flex justify-center mb-1.5">
             <img
-              src="./logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AI-Agents Logo"
               className="h-8 w-8 object-contain drop-shadow-[0_0_6px_rgba(0,217,165,0.7)]"
             />

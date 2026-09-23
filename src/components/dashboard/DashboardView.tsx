@@ -118,7 +118,7 @@ export const DashboardView: React.FC = () => {
             {/* Elegant glass card and logo background */}
             <div className="relative p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-[#00D9A5]/30 shadow-[0_0_40px_rgba(0,217,165,0.4)]">
               <img
-                src="./logo.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="AI-Agents Logo"
                 className="h-32 w-32 object-contain drop-shadow-[0_0_15px_rgba(0,217,165,0.7)]"
               />

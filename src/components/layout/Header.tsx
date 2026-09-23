@@ -84,7 +84,7 @@ export const Header: React.FC = () => {
           {/* Real Green logo.png Logo */}
           <div className="relative flex h-9 w-9 items-center justify-center">
             <img
-              src="./logo.png"
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="AI-Agents Logo"
               className="relative h-8 w-8 object-contain"
             />
