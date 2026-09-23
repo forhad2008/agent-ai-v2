@@ -104,7 +104,10 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [tasks, setTasks] = useState<TaskItem[]>(() => {
     try {
       const saved = localStorage.getItem('abdullah_tasks');
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const sanitized = saved.replace(/Agent-alpha08/g, 'Agent-forest08').replace(/alpha08/g, 'forest08');
+        return JSON.parse(sanitized);
+      }
     } catch (e) {}
     return INITIAL_TASKS;
   });
@@ -115,7 +118,10 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [messages, setMessages] = useState<MessageItem[]>(() => {
     try {
       const saved = localStorage.getItem('abdullah_messages');
-      if (saved) return JSON.parse(saved);
+      if (saved) {
+        const sanitized = saved.replace(/Agent-alpha08/g, 'Agent-forest08').replace(/alpha08/g, 'forest08');
+        return JSON.parse(sanitized);
+      }
     } catch (e) {}
     return INITIAL_MESSAGES;
   });
@@ -226,8 +232,8 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const saved = localStorage.getItem('abdullah_user_profile');
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (parsed.email !== 'forhadalpha@gmail.com') {
-          parsed.email = 'forhadalpha@gmail.com';
+        if (parsed.email !== 'forhadforest@gmail.com') {
+          parsed.email = 'forhadforest@gmail.com';
           localStorage.setItem('abdullah_user_profile', JSON.stringify(parsed));
         }
         return parsed;
@@ -237,7 +243,7 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       name: 'Abdullah',
       role: 'Senior Software Engineer & AI Work Leader',
       company: 'Autonomous Work OS Tech',
-      email: 'forhadalpha@gmail.com',
+      email: 'forhadforest@gmail.com',
       bio: 'Focusing on building high-performance web applications, autonomous AI agent systems, and automated developer workflows.',
       goals: 'Automate daily tasks, audit website code & SEO, handle customer replies, and streamline operations.',
       preferences: 'Be concise, structured, action-oriented, and highlight key metrics.',
@@ -260,7 +266,7 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const initialLang = useMemo(() => getInitialLanguage(), []);
 
   const [settings, setSettings] = useState<SettingsState>({
-    agentName: 'Agent-alpha08',
+    agentName: 'Agent-forest08',
     language: initialLang.id,
     aiBehavior: 'semi-autonomous',
     permissionSensitivity: 'Medium',
@@ -626,8 +632,8 @@ export const AgentProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         id: `msg_new_${Date.now()}`,
         sender: 'agent',
         text: settings.language === 'Bangla' 
-          ? `## কাজ\nনতুন কথোপকথন প্রস্তুত করা হয়েছে। Agent-alpha08 আপনার নতুন নির্দেশনার অপেক্ষায় রয়েছে।`
-          : `## Action\nNew conversation workspace initialized. Agent-alpha08 is standing by for instructions.`,
+          ? `## কাজ\nনতুন কথোপকথন প্রস্তুত করা হয়েছে। Agent-forest08 আপনার নতুন নির্দেশনার অপেক্ষায় রয়েছে।`
+          : `## Action\nNew conversation workspace initialized. Agent-forest08 is standing by for instructions.`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         planSteps: [
           { title: 'Workspace reset', status: 'completed' },

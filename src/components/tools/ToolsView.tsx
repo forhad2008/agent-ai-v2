@@ -54,7 +54,7 @@ export const ToolsView: React.FC = () => {
     } else if (tool.id === 'tool_analyze_code') {
       setTestInput('function calc(a, b) {\n  // Missing type validation and optimization\n  return a + b;\n}');
     } else if (tool.id === 'tool_seo_audit') {
-      setTestInput('https://forhadalpha.github.io/portfolio');
+      setTestInput('https://forhadforest.github.io/portfolio');
     } else if (tool.id === 'tool_sql_designer') {
       setTestInput(`-- Interactive SQL Sandbox\nCREATE TABLE developers (\n  id SERIAL PRIMARY KEY,\n  name TEXT NOT NULL,\n  stars INT DEFAULT 5\n);\n\nINSERT INTO developers (name, stars) VALUES ('Abdullah', 5);\nSELECT * FROM developers;`);
     } else if (tool.id === 'tool_prompt_optimizer') {
@@ -317,7 +317,7 @@ export const ToolsView: React.FC = () => {
 
                       {testResult.recommendations && (
                         <div className="bg-[#010b07] p-3 rounded-xl border border-[#10B981]/20 space-y-1">
-                          <div className="text-[#00D9A5] font-bold text-[10px] mb-1">🚀 Recommended Actions for Forhad Alpha:</div>
+                          <div className="text-[#00D9A5] font-bold text-[10px] mb-1">🚀 Recommended Actions for Forhad Forest:</div>
                           {testResult.recommendations.map((rec: string, i: number) => (
                             <div key={i} className="text-[#F8FAFC] text-[11px] flex gap-2">
                               <span className="text-[#00D9A5] font-bold">✓</span>

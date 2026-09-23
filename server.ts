@@ -676,7 +676,7 @@ app.post("/api/agent/tool/execute", async (req, res) => {
       }
 
       case "seo_audit": {
-        const url = parameters.url || "https://forhadalpha.github.io/portfolio";
+        const url = parameters.url || "https://forhadforest.github.io/portfolio";
         if (ai) {
           try {
             const resp = await generateContentWithRetryAndFallback(ai, {
@@ -707,7 +707,7 @@ app.post("/api/agent/tool/execute", async (req, res) => {
               metadata: {
                 title: "Abdullah - Autonomous AI Engineer Portfolio",
                 description: "Full-Stack Work OS Hub, Next-Gen Autopilot, and Custom Development Workflows.",
-                keywords: "AI Engineer, PWA, Work OS, Autonomous Agent, Forhad Alpha",
+                keywords: "AI Engineer, PWA, Work OS, Autonomous Agent, Forhad Forest",
                 sslStatus: "Secure (SSL Active)",
                 responsive: "Mobile-optimized grid layouts verified."
               },
@@ -738,7 +738,7 @@ app.post("/api/agent/tool/execute", async (req, res) => {
             metadata: {
               title: "Abdullah - Autonomous AI Engineer Portfolio",
               description: "Full-Stack Work OS Hub, Next-Gen Autopilot, and Custom Development Workflows.",
-              keywords: "AI Engineer, PWA, Work OS, Autonomous Agent, Forhad Alpha",
+              keywords: "AI Engineer, PWA, Work OS, Autonomous Agent, Forhad Forest",
               sslStatus: "Secure (SSL Active)",
               responsive: "Mobile-optimized grid layouts verified."
             },
@@ -769,7 +769,7 @@ app.post("/api/agent/tool/execute", async (req, res) => {
           rowsInserted: 2,
           columns: ["id", "name", "email", "stars"],
           rows: [
-            { id: 1, name: "Abdullah", email: "forhadalpha@gmail.com", stars: 5 },
+            { id: 1, name: "Abdullah", email: "forhadforest@gmail.com", stars: 5 },
             { id: 2, name: "Guest Specialist", email: "guest@workos.io", stars: 4 }
           ],
           schemaPlan: "Analyzed execution path. PRIMARY KEY lookup used. Estimated cost: O(1).",
@@ -1309,7 +1309,7 @@ app.post("/api/playground/search", async (req, res) => {
       summary = `### Factual Summary for: "${query}"\n\nGoogle Search grounding analyzed multiple live technical indexes and documentation. Here are the core insights:\n\n1. **Integration Status:** Confirmed active deployment of custom workspace toolchains.\n2. **Performance Metrics:** Low latency sub-100ms verified across regional server grids.\n3. **Reliability:** 99.99% operational uptime maintained.\n\n*Note: This response incorporates grounded live data queries from authorized technical search indexes.*`;
       citations = [
         { index: 1, title: "Official WorkOS Documentation Hub", url: "https://workos.io", snippet: "Developer guides on integrating auth, database sandboxes, and offline tools." },
-        { index: 2, title: "Forhad Alpha - Tech Portfolio", url: "https://forhadalpha.github.io/portfolio", snippet: "Main hub presenting advanced autonomous solutions and workspace automations." }
+        { index: 2, title: "Forhad Forest - Tech Portfolio", url: "https://forhadforest.github.io/portfolio", snippet: "Main hub presenting advanced autonomous solutions and workspace automations." }
       ];
     }
 
@@ -1511,7 +1511,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Agent-alpha08 server running on http://0.0.0.0:${PORT}`);
+    console.log(`Agent-forest08 server running on http://0.0.0.0:${PORT}`);
   });
 }
 

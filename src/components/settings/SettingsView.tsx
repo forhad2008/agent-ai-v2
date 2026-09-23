@@ -595,7 +595,7 @@ export const SettingsView: React.FC = () => {
                   {simStatus === 'generating' && (
                     <div className="flex items-center gap-1.5 text-[#00D9A5] font-sans font-bold animate-pulse py-1">
                       <RefreshCw className="h-3.5 w-3.5 animate-spin" />
-                      <span>Agent-alpha08 drafting response...</span>
+                      <span>Agent-forest08 drafting response...</span>
                     </div>
                   )}
                 </div>

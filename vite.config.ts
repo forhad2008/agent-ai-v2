@@ -14,8 +14,8 @@ export default defineConfig(() => {
         includeAssets: ['logo.png', 'bg2.png', 'bg100.png'],
         manifest: {
           id: './',
-          name: 'Agent-alpha08',
-          short_name: 'Agent08',
+          name: 'Agent-forest08',
+          short_name: 'Forest08',
           description: 'Personal AI operating system and task execution agent powered by Gemini.',
           theme_color: '#050510',
           background_color: '#050510',

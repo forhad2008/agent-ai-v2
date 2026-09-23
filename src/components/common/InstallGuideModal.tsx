@@ -105,7 +105,7 @@ export const InstallGuideModal: React.FC = () => {
               <p className="text-[11px] text-[#94A3B8]">
                 {isBangla
                   ? 'মোবাইল বা পিসিতে ফুল-স্ক্রিন এক্সপেরিয়েন্সের জন্য ইনস্টল করুন'
-                  : 'Run Agent-alpha08 directly from your home screen or desktop'}
+                  : 'Run Agent-forest08 directly from your home screen or desktop'}
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export const InstallGuideModal: React.FC = () => {
             <span>
               {isBangla
                 ? 'অভিনন্দন! আপনি ইতিমধ্যেই রিয়েল এজেন্ট অ্যাপটি সফলভাবে ইনস্টল করেছেন।'
-                : 'PWA Connected: Agent-alpha08 is running in native app mode.'}
+                : 'PWA Connected: Agent-forest08 is running in native app mode.'}
             </span>
           </div>
         )}
@@ -330,7 +330,7 @@ export const InstallGuideModal: React.FC = () => {
               <p className="text-slate-300 font-medium">
                 {isBangla
                   ? 'আপনার ম্যাক বা উইন্ডোজ পিসিতে ফুল স্ট্যান্ডঅ্যালোন অপারেটিং সিস্টেম হিসেবে রান করুন:'
-                  : 'Install Agent-alpha08 on your PC/Mac for deep desktop multi-window workflows:'}
+                  : 'Install Agent-forest08 on your PC/Mac for deep desktop multi-window workflows:'}
               </p>
 
               {deferredPrompt ? (
@@ -366,8 +366,8 @@ export const InstallGuideModal: React.FC = () => {
                     </div>
                     <span>
                       {isBangla
-                        ? 'অথবা ব্রাউজারের থ্রি-ডট মেনু খুলে "Install Agent-alpha08..." সিলেক্ট করুন।'
-                        : 'Alternatively, open Chrome/Edge Menu and select "Install Agent-alpha08..."'}
+                        ? 'অথবা ব্রাউজারের থ্রি-ডট মেনু খুলে "Install Agent-forest08..." সিলেক্ট করুন।'
+                        : 'Alternatively, open Chrome/Edge Menu and select "Install Agent-forest08..."'}
                     </span>
                   </div>
                   <div className="flex items-start gap-2.5">

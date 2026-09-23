@@ -286,7 +286,7 @@ export const ChatView: React.FC = () => {
                 {/* Sender badge & timestamp */}
                 <div className="flex items-center gap-2 mb-1 px-1 text-[11px] text-[#94A3B8]">
                   <span className="font-semibold text-[#F8FAFC]">
-                    {isUser ? 'You (Abdullah)' : 'Abdullah AI Work Agent'}
+                    {isUser ? 'You (Abdullah)' : (settings.agentName || 'Agent-forest08')}
                   </span>
                   <span>•</span>
                   <span>{msg.timestamp}</span>
@@ -465,7 +465,7 @@ export const ChatView: React.FC = () => {
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 px-1 text-[#00D9A5]">
                 <div className="flex items-center gap-1.5">
                   <span className="h-2 w-2 rounded-full bg-[#00D9A5] animate-ping" />
-                  <span className="font-semibold">Abdullah AI Work Agent</span>
+                  <span className="font-semibold">{settings.agentName || 'Agent-forest08'}</span>
                 </div>
                 <span className="hidden sm:inline">•</span>
                 <span className="bg-[#00D9A5]/10 text-[#00D9A5] px-2 py-0.5 rounded-md border border-[#00D9A5]/20 font-bold tracking-wider font-mono text-[9px] animate-pulse">
