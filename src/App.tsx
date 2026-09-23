@@ -53,27 +53,27 @@ const MainLayout: React.FC = () => {
   };
 
   return (
-    <div className="relative flex h-screen w-screen overflow-hidden bg-black text-[#F8FAFC] font-sans antialiased">
-      {/* 100% Saturated Vivid Forest Sunlit Background representing image mockup exactly */}
+    <div className="relative flex h-screen w-screen overflow-hidden bg-[#070b0e] text-[#F8FAFC] font-sans antialiased">
+      {/* Natural Evening Forest Background Image from Web (Unsplash High-Res Dusk Forest) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1920&q=80"
-          alt="Glowing sunlit forest nature background"
-          className="w-full h-full object-cover transition-all duration-700"
-          style={{ filter: 'brightness(0.55) saturate(135%) contrast(115%)' }}
+          src="https://images.unsplash.com/photo-1511497584788-876761465586?auto=format&fit=crop&w=2560&q=80"
+          alt="Atmospheric evening forest at dusk with warm twilight glow"
+          className="w-full h-full object-cover transition-all duration-1000 scale-105 animate-subtle-zoom"
+          style={{ filter: 'brightness(0.72) saturate(125%) contrast(110%)' }}
         />
-        {/* Magic sunrays and leaf shadows glass vignette layer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/90 pointer-events-none" />
+        {/* Evening twilight forest gradient vignette layer */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/85 pointer-events-none" />
       </div>
 
-      {/* Ambient glowing dust & green light particle indicators */}
+      {/* Ambient glowing evening forest light particle indicators */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden z-10">
-        <div className="absolute -top-32 left-[15%] h-[550px] w-[550px] rounded-full bg-gradient-to-br from-[#10B981]/25 via-transparent to-transparent blur-[140px]" />
-        <div className="absolute right-[-80px] top-[15%] h-[600px] w-[600px] rounded-full bg-gradient-to-bl from-[#00D9A5]/25 via-transparent to-transparent blur-[160px]" />
+        <div className="absolute -top-32 left-[15%] h-[550px] w-[550px] rounded-full bg-gradient-to-br from-[#F59E0B]/20 via-[#D97706]/10 to-transparent blur-[140px]" />
+        <div className="absolute right-[-80px] top-[15%] h-[600px] w-[600px] rounded-full bg-gradient-to-bl from-[#10B981]/20 via-[#059669]/10 to-transparent blur-[160px]" />
       </div>
 
-      {/* Main floating desktop frames (Padded to match mockup image borders exactly) */}
-      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden backdrop-blur-[2px] bg-black/10">
+      {/* Main floating desktop frames (Targeted focused container div:nth-of-type(3)) */}
+      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden backdrop-blur-[2px] bg-black/15">
         {/* Floating top bar */}
         <Header />
 
