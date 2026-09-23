@@ -96,10 +96,10 @@ export const DashboardView: React.FC = () => {
           sm:p-8
           md:p-10
           border
-          border-[#10B981]/25
-          bg-black/30
-          backdrop-blur-[20px]
-          shadow-[0_12px_40px_rgba(1,20,13,0.3)]
+          border-[#10B981]/20
+          bg-black/10
+          backdrop-blur-md
+          shadow-[0_12px_40px_rgba(1,20,13,0.15)]
         "
       >
         {/* Subtle decorative grid layer */}
@@ -116,7 +116,7 @@ export const DashboardView: React.FC = () => {
             <div className="absolute inset-0 rounded-full bg-[#00D9A5]/15 blur-3xl animate-pulse" />
             
             {/* Elegant glass card and logo background */}
-            <div className="relative p-6 rounded-3xl bg-black/40 backdrop-blur-md border border-[#00D9A5]/30 shadow-[0_0_40px_rgba(0,217,165,0.4)]">
+            <div className="relative p-6 rounded-3xl bg-black/15 backdrop-blur-md border border-[#00D9A5]/30 shadow-[0_0_40px_rgba(0,217,165,0.25)]">
               <img
                 src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="AI-Agents Logo"

@@ -11,7 +11,7 @@ export default defineConfig(() => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: ['logo.png', 'bg2.png'],
+        includeAssets: ['logo.png', 'bg2.png', 'bg100.png'],
         manifest: {
           id: './',
           name: 'Agent-alpha08',

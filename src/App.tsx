@@ -53,27 +53,31 @@ const MainLayout: React.FC = () => {
   };
 
   return (
-    <div className="relative flex h-screen w-screen overflow-hidden bg-[#070b0e] text-[#F8FAFC] font-sans antialiased">
-      {/* Natural Evening Forest Background Image from Web (Unsplash High-Res Dusk Forest) */}
+    <div className="relative flex h-screen w-screen overflow-hidden bg-[#0f172a] text-[#F8FAFC] font-sans antialiased">
+      {/* Uploaded Custom Background Image bg100.png */}
       <div className="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511497584788-876761465586?auto=format&fit=crop&w=2560&q=80"
-          alt="Atmospheric evening forest at dusk with warm twilight glow"
-          className="w-full h-full object-cover transition-all duration-1000 scale-105 animate-subtle-zoom"
-          style={{ filter: 'brightness(0.72) saturate(125%) contrast(110%)' }}
+          src="./bg100.png"
+          alt="Main custom background"
+          className="w-full h-full object-cover transition-all duration-1000 scale-105"
+          style={{ filter: 'brightness(1.35) saturate(110%) contrast(100%)' }}
+          onError={(e) => {
+            // Fallback to /bg100.png if relative path varies
+            (e.currentTarget as HTMLImageElement).src = '/bg100.png';
+          }}
         />
-        {/* Evening twilight forest gradient vignette layer */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/85 pointer-events-none" />
+        {/* Subtle, ultra-light shadow gradient for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/15 pointer-events-none" />
       </div>
 
-      {/* Ambient glowing evening forest light particle indicators */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden z-10">
-        <div className="absolute -top-32 left-[15%] h-[550px] w-[550px] rounded-full bg-gradient-to-br from-[#F59E0B]/20 via-[#D97706]/10 to-transparent blur-[140px]" />
-        <div className="absolute right-[-80px] top-[15%] h-[600px] w-[600px] rounded-full bg-gradient-to-bl from-[#10B981]/20 via-[#059669]/10 to-transparent blur-[160px]" />
+      {/* Ambient glowing forest light particle indicators */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden z-10 opacity-50">
+        <div className="absolute -top-32 left-[15%] h-[550px] w-[550px] rounded-full bg-gradient-to-br from-[#10B981]/15 via-transparent to-transparent blur-[140px]" />
+        <div className="absolute right-[-80px] top-[15%] h-[600px] w-[600px] rounded-full bg-gradient-to-bl from-[#00D9A5]/15 via-transparent to-transparent blur-[160px]" />
       </div>
 
       {/* Main floating desktop frames (Targeted focused container div:nth-of-type(3)) */}
-      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden backdrop-blur-[2px] bg-black/15">
+      <div className="relative z-40 flex h-full w-full flex-col p-3 sm:p-5 gap-3 sm:gap-4 overflow-hidden bg-transparent">
         {/* Floating top bar */}
         <Header />
 

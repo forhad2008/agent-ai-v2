@@ -98,12 +98,12 @@ export const Sidebar: React.FC = () => {
         flex-col
         rounded-2xl
         border
-        border-[#10B981]/25
-        bg-black/35
+        border-[#10B981]/20
+        bg-black/10
         p-2
         sm:p-3
-        backdrop-blur-[24px]
-        shadow-[0_8px_32px_rgba(1,20,13,0.35)]
+        backdrop-blur-md
+        shadow-[0_8px_32px_rgba(1,20,13,0.2)]
         transition-all
       "
     >
